@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Beautiful arena · Hub</title>
+  <meta name="description" content="Quick launch hub for services and projects." />
+  <link rel="icon" href="/assets/img/favicon.png" />
+  <style>
+    :root{
+      --bg: #f7f7f9;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #475569;
+      --accent: #6366f1;
+      --ring: rgba(99,102,241,0.35);
+      --shadow: 0 10px 25px rgba(0,0,0,0.08);
+      --radius: 20px;
+      --gap: 16px;
+      --maxw: 1180px;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg: #0b1220;
+        --card: #0f172a;
+        --text: #e5e7eb;
+        --muted: #94a3b8;
+        --accent: #8b5cf6;
+        --ring: rgba(139,92,246,0.35);
+        --shadow: 0 10px 30px rgba(0,0,0,0.35);
+      }
+    }
+    html { font-family: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Inter, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif; }
+    body{
+      margin:0; background: radial-gradient(1200px 600px at 80% -10%, rgba(99,102,241,0.08), transparent 60%),
+                          radial-gradient(900px 500px at -10% 10%, rgba(236,72,153,0.08), transparent 60%),
+                          var(--bg);
+      color: var(--text);
+    }
+    .wrap{max-width:var(--maxw); margin:0 auto; padding: 48px 20px 64px;}
+    header{display:flex; align-items:flex-start; justify-content:space-between; gap:24px; margin-bottom:28px;}
+    .brand h1{margin:0; font-size: clamp(28px, 4vw, 40px); letter-spacing: -0.02em;}
+    .brand p{margin:6px 0 0; color:var(--muted); font-size: 14px;}
+    .actions{display:flex; gap:10px; align-items:center;}
+    .pill{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:10px 14px; border-radius:999px; background: color-mix(in oklab, var(--card) 92%, transparent);
+      box-shadow: var(--shadow); border:1px solid color-mix(in oklab, var(--muted) 18%, transparent);
+      color:var(--muted); text-decoration:none; font-size: 13px;
+    }
+    .grid{
+      display:grid; gap:var(--gap);
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      margin-top: 12px;
+    }
+    .card{
+      position:relative; background: linear-gradient(180deg, color-mix(in oklab, var(--card) 100%, transparent), color-mix(in oklab, var(--card) 88%, transparent));
+      border:1px solid color-mix(in oklab, var(--muted) 16%, transparent);
+      border-radius: var(--radius); padding:18px 18px 16px; box-shadow: var(--shadow);
+      transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+      text-decoration:none; color:inherit; display:block;
+    }
+    .card:hover{ transform: translateY(-2px); box-shadow: 0 16px 40px rgba(0,0,0,0.15); border-color: color-mix(in oklab, var(--accent) 45%, transparent);}
+    .card:focus-visible{ outline: 3px solid var(--ring); outline-offset: 2px;}
+    .card .icon{ width:34px; height:34px; border-radius:12px; display:grid; place-items:center; margin-bottom:12px;
+                 background: color-mix(in oklab, var(--accent) 16%, var(--card)); }
+    .card h3{ margin:2px 0 4px; font-size:16px; letter-spacing: -0.01em;}
+    .card p{ margin:0; color:var(--muted); font-size:13px;}
+    .section{margin-top: 24px;}
+    .section h2{font-size:14px; font-weight:600; color:var(--muted); margin:20px 2px 12px; text-transform:uppercase; letter-spacing:.12em;}
+    footer{ margin-top: 40px; color:var(--muted); font-size:12px; text-align:center; }
+    .badge{font-size:11px; padding:2px 8px; border-radius:999px; border:1px solid color-mix(in oklab, var(--muted) 24%, transparent); margin-left:8px;}
+    @media (max-width:520px){ .actions{display:none;} }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <h1>Beautiful arena · Hub <span class="badge">v1</span></h1>
+        <p>Quick launch for subscriptions, reading, media tools, and streaming.</p>
+      </div>
+      <div class="actions">
+        <a class="pill" href="https://sifortonzh.github.io" target="_blank" rel="noopener">Open Blog</a>
+        <a class="pill" href="https://github.com/Sifortonzh/hub-meta" target="_blank" rel="noopener">Repo</a>
+      </div>
+    </header>
+
+    <div class="section">
+      <h2>Subscriptions</h2>
+      <div class="grid">
+        <a class="card" href="http://localhost:8282/" target="_blank" rel="noopener">
+          <div class="icon">🧾</div>
+          <h3>Wallos</h3>
+          <p>Subscription manager</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Reading</h2>
+      <div class="grid">
+        <a class="card" href="http://localhost:8080/#/" target="_blank" rel="noopener">
+          <div class="icon">📚</div>
+          <h3>Reader</h3>
+          <p>Books & comics</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Media Tools</h2>
+      <div class="grid">
+        <a class="card" href="http://localhost:3000/" target="_blank" rel="noopener">
+          <div class="icon">🛰️</div>
+          <h3>MoonTV</h3>
+          <p>Media aggregation</p>
+        </a>
+        <a class="card" href="http://localhost:1111/" target="_blank" rel="noopener">
+          <div class="icon">📝</div>
+          <h3>Blinko</h3>
+          <p>Notes & snippets</p>
+        </a>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Streaming</h2>
+      <div class="grid">
+        <a class="card" href="https://www.netflix.com/" target="_blank" rel="noopener">
+          <div class="icon">🎞️</div>
+          <h3>Netflix</h3>
+          <p>Streaming</p>
+        </a>
+        <a class="card" href="https://www.max.com/" target="_blank" rel="noopener">
+          <div class="icon">🍿</div>
+          <h3>Max (HBO)</h3>
+          <p>Streaming</p>
+        </a>
+      </div>
+    </div>
+
+    <footer>
+      <p>© Beautiful arena · Contact: yxzhong@smu.email.cn · Telegram: @lovekikiforever</p>
+    </footer>
+  </div>
+</body>
+</html>
