@@ -3,10 +3,10 @@
 Modern hub page (single file) with your current tools pre-filled.
 
 ## What's included
-- **Subscriptions**: Wallos (`http://localhost:8282/`)
-- **Reading**: Reader (`http://localhost:8080/#/`)
-- **Media Tools**: MoonTV (`http://localhost:3000/`), Blinko (`http://localhost:1111/`)
-- **Streaming**: Netflix / Max
+- **Subscriptions**: Wallos (https://wallos.hub.avecrouge.com/)
+- **Reading**: Reader (https://reader.hub.avecrouge.com/)
+- **Media Tools**: MoonTV (https://moontv.hub.avecrouge.com/), Blinko (https://blinko.hub.avecrouge.com/)
+- **Streaming**: Netflix / Max / Disney+ (https://www.disneyplus.com/zh-hk/home)
 
 ## Deploy on GitHub Pages
 Settings → Pages → **Deploy from a branch** → Branch: `main` / Folder: `/ (root)`
@@ -19,4 +19,4 @@ python3 -m http.server 5173
 ```
 
 ## Add more cards
-Duplicate one `<a class="card">` block inside the desired section, edit emoji/title/desc/link.
+Duplicate one `<a class="card">` block inside the desired section, edit icon/title/desc/link.
