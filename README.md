@@ -1,22 +1,39 @@
-# hub-meta
+# Beautiful arena · Hub (v2)
 
-Modern hub page (single file) with your current tools pre-filled.
+A lightweight, single-file launchpad for your sites, streaming, tools and admin consoles.  
+English UI · Auto dark/light · Keyboard shortcuts
 
-## What's included
-- **Subscriptions**: Wallos (https://wallos.hub.avecrouge.com/)
-- **Reading**: Reader (https://reader.hub.avecrouge.com/)
-- **Media Tools**: MoonTV (https://moontv.hub.avecrouge.com/), Blinko (https://blinko.hub.avecrouge.com/)
-- **Streaming**: Netflix / Max / Disney+ (https://www.disneyplus.com/zh-hk/home)
+_Last updated: **2025-08-26**_
 
-## Deploy on GitHub Pages
-Settings → Pages → **Deploy from a branch** → Branch: `main` / Folder: `/ (root)`
+## Sections
+- Blog (first row): Beautiful arena / WP / TP
+- Streaming: Netflix / Max / Disney+ / Cinemore
+- Tools: OpenList / Reader
+- Tech: BT Panel / Blog Admin / hPanel / BillionMail
+- Community: KVIP / Qidian / Zongheng
 
-## Local preview
+## Quick start
 ```bash
-make serve
-# or
-python3 -m http.server 5173
+git init
+git add .
+git commit -m "feat: initial hub"
+git branch -M main
+git remote add origin <YOUR_REPO_URL>
+git push -u origin main
 ```
 
-## Add more cards
-Duplicate one `<a class="card">` block inside the desired section, edit icon/title/desc/link.
+### GitHub Pages (optional)
+Enable **Settings → Pages** on the repo.  
+(Optional) add a `CNAME` file with `hub.avecrouge.top`.
+
+## Deploy (server / BT Panel)
+1. Create site `hub.avecrouge.top` → doc root `/www/wwwroot/hub.avecrouge.top`
+2. Upload `index.html`
+3. Issue Let's Encrypt to enable HTTPS
+
+## Current links
+Blog: http://avecrouge.top · https://avecrouge.org · https://avecrouge.com  
+Streaming: Netflix · Max · Disney+ · Cinemore  
+Tools: OpenList · Reader  
+Tech: BT Panel · Blog Admin · hPanel · BillionMail  
+Community: KVIP · Qidian · Zongheng
